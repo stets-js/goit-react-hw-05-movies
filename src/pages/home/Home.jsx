@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import getTrending from '../../components/Fetch';
+import {getTrending} from '../../components/Fetch';
 import css from './Home.module.css'
 
 const Home = () => {

@@ -7,7 +7,7 @@ const options = {
   },
 };
 
-const getTrending = async () => {
+export const getTrending = async () => {
   try {
     const response = await axios.get(`${BASE_URL}trending/movie/week`, options);
     return response.data;
@@ -53,5 +53,3 @@ export const getRewiesMovies = async id => {
     console.log(`${error.name}: ${error.message}`);
   }
 };
-
-export default getTrending;
