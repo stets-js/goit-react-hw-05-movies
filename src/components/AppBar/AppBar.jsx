@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import css from './AppBar.module.css'
 
 
 const navMenu = [
@@ -9,10 +10,10 @@ const navMenu = [
 
 const AppBar = () => {
   return (
-    <div>
-      <div>
+    <div className={css.header}>
+      <div className={css.navList}>
         {navMenu.map(({ href, text }) => (
-          <Link to={href} key={href}>
+          <Link className={css.navLink} to={href} key={href}>
             {text}
           </Link>
         ))}
