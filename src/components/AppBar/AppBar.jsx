@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import css from './AppBar.module.css'
+import styled from 'styled-components';
 
 
 const navMenu = [
@@ -8,14 +9,20 @@ const navMenu = [
   { href: 'movies', text: 'MOVIES' },
 ];
 
+const ItemMenu = styled(NavLink)`
+&.active{
+  background: linear-gradient(45deg, transparent 5%, #00FFD1 5%);
+}
+`
+
 const AppBar = () => {
   return (
     <div className={css.header}>
       <div className={css.navList}>
         {navMenu.map(({ href, text }) => (
-          <Link className={css.navLink} to={href} key={href}>
+          <ItemMenu className={css.navLink} to={href} key={href}>
             {text}
-          </Link>
+          </ItemMenu>
         ))}
       </div>
     </div>
