@@ -1,0 +1,45 @@
+.heroTitle {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Bungee Spice', cursive;
+  color: #98bae7;
+  text-align: center;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.movieList {
+  list-style: none;
+  display: flex;
+  grid-template-rows: auto;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.listItem {
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px, 6px 0px 0px #e2fe2b;
+  background: linear-gradient(transparent 5%, #891fe3 5%);
+}
+
+.imgItem {
+  width: 100%;
+  object-fit: cover;
+}
+
+.titleItem {
+  font-family: 'Inknut Antiqua', serif;
+  color: #98bae7;
+  text-align: center;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.subtitleItem {
+  text-align: center;
+}

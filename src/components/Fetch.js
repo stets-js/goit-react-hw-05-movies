@@ -7,7 +7,7 @@ const options = {
   },
 };
 
-export const getTrending = async () => {
+const getTrending = async () => {
   try {
     const response = await axios.get(`${BASE_URL}trending/movie/week`, options);
     return response.data;
@@ -16,7 +16,7 @@ export const getTrending = async () => {
   }
 };
 
-export const getSerchMovies = async query => {
+export const getSearchMovies = async query => {
   try {
     const response = await axios.get(`${BASE_URL}search/movie`, {
       params: { query: query, api_key: options.params.api_key },
@@ -53,3 +53,5 @@ export const getRewiesMovies = async id => {
     console.log(`${error.name}: ${error.message}`);
   }
 };
+
+export default getTrending;
