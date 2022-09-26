@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {getSearchMovies} from '../../components/Fetch';
 import css from '../movies/Movies.module.css';
 
@@ -21,14 +22,14 @@ const Movies = () => {
     setQuery('');
   };
 
-    useEffect(() => {
-        <h1>list</h1>
-    },[films, query])
+    // useEffect(() => {
+    //     <h1>list</h1>
+    // },[films, query])
     
 
     return (
       <>
-    <header>
+    
       <form className={css.searchForm} onSubmit={handleSubmit}>
                     <input
                         className={css.inputForm}
@@ -41,13 +42,13 @@ const Movies = () => {
             onChange={handleChange}
           />
         <button className={css.btn}>Search</button>
-        
-    
       </form>
-            </header>
+    
+    
         {films.length > 0 ? <ul className={css.movieList}>
       {films.map(film => (
-        <li key={film.id} className={css.listItem}>
+        <Link to={`${film.id}`} key={film.id}>
+        <li  className={css.listItem}>
               {film.poster_path ? <img
                   src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                   alt={film.title}
@@ -56,9 +57,12 @@ const Movies = () => {
               <h2 className={css.titleItem}>{film.title}</h2>
               <p className={css.subtitleItem}>Relase year: {film.release_date}</p>
         </li>
+        </Link>
       ))}
-    </ul> : null }    
-        </>
+        </ul> : null}
+      
+      </>
+      
   );
 };
 
