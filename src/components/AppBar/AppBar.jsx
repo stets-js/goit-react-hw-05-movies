@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 
 const navMenu = [
-  { href: 'home', text: 'HOME' },
+  { href: '/', text: 'HOME' },
   { href: 'movies', text: 'MOVIES' },
 ];
 
@@ -20,7 +20,7 @@ const AppBar = () => {
     <div className={css.header}>
       <div className={css.navList}>
         {navMenu.map(({ href, text }) => (
-          <ItemMenu className={css.navLink} to={href} key={href}>
+          <ItemMenu className={css.navLink} to={href} key={href} end>
             {text}
           </ItemMenu>
         ))}
