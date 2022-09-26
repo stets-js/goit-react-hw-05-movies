@@ -21,7 +21,7 @@ const MovieDetail = () => {
   }
   return (
     <>
-      <Link to={lastLocation}>Go back</Link>
+      <Link to={lastLocation} ><button className={css.btn}>Go back</button></Link>
       <div className={css.movieSection}>{movie.poster_path ? (
                   <img
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -48,12 +48,12 @@ const MovieDetail = () => {
   
       <ul className={css.subMenu}>
         <li>
-          <Link  to="cast" className={css.subMenuLink}>
+          <Link  key='cast' to="cast" className={css.subMenuLink}>
             Cast
           </Link>
         </li>
         <li>
-          <Link  to="reviews" className={css.subMenuLink}>
+          <Link key='reviews' to="reviews" className={css.subMenuLink}>
             Review
           </Link>
         </li>

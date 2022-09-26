@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCastMovies } from '../Fetch';
-//import css from '../Cast/Cast.module.css';
+import css from '../Cast/Cast.module.css';
 
 export const Cast = () => {
   const { movieId } = useParams();
-  const [cast, setCast] = useState(null);
-  console.log(cast);
+    const [cast, setCast] = useState(null);
+
 
   useEffect(() => {
     getCastMovies(movieId).then(data => {
@@ -15,22 +15,15 @@ export const Cast = () => {
   }, [movieId]);
 
   return (
-            <ul>
-          {cast.map(item =>
-              <li key={item.id}>
-                  <img
-                      src={
-                          item.profile_path
-                              ? `https://image.tmdb.org/t/p/w500${item.profile_path}`
-                              : 'https://i.gifer.com/C7Gr.gif'
-                      }
-                      alt={item.name}
-                  />
-                  <h3>{item.name}</h3>
-                  <p>Character: {item.character}</p>
-              </li>
-          )}
-        </ul>
+    <ul className={css.castList}>
+          {cast ? cast.map(item => <li className={css.castItem}>
+              {item.profile_path ? <img src={`https://image.tmdb.org/t/p/w500${item.profile_path}`} alt={item.name} className={css.castImg} /> : <img src={'https://i.gifer.com/C7Gr.gif'}  alt={item.name} className={css.errorImg} />}
+              <div className={css.actorInfo}>
+                  <h2>{item.name}</h2>
+              <p>Character: { item.character}</p>
+              </div>
+    </li>): null}      
+    </ul>
   );
 };
 export default Cast;
