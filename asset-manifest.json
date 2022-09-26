@@ -1,14 +1,26 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-05-movies/static/css/main.bc6b8dcd.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.41454259.js",
+    "main.css": "/goit-react-hw-05-movies/static/css/main.64f75226.css",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.ce2819bf.js",
+    "static/css/970.74853f30.chunk.css": "/goit-react-hw-05-movies/static/css/970.74853f30.chunk.css",
+    "static/js/970.8ce19a5e.chunk.js": "/goit-react-hw-05-movies/static/js/970.8ce19a5e.chunk.js",
+    "static/css/577.25021021.chunk.css": "/goit-react-hw-05-movies/static/css/577.25021021.chunk.css",
+    "static/js/577.114c332f.chunk.js": "/goit-react-hw-05-movies/static/js/577.114c332f.chunk.js",
+    "static/css/894.72be1e92.chunk.css": "/goit-react-hw-05-movies/static/css/894.72be1e92.chunk.css",
+    "static/js/894.eb70f300.chunk.js": "/goit-react-hw-05-movies/static/js/894.eb70f300.chunk.js",
     "static/media/search.png": "/goit-react-hw-05-movies/static/media/search.961af76f1846cbfee684.png",
     "index.html": "/goit-react-hw-05-movies/index.html",
-    "main.bc6b8dcd.css.map": "/goit-react-hw-05-movies/static/css/main.bc6b8dcd.css.map",
-    "main.41454259.js.map": "/goit-react-hw-05-movies/static/js/main.41454259.js.map"
+    "main.64f75226.css.map": "/goit-react-hw-05-movies/static/css/main.64f75226.css.map",
+    "main.ce2819bf.js.map": "/goit-react-hw-05-movies/static/js/main.ce2819bf.js.map",
+    "970.74853f30.chunk.css.map": "/goit-react-hw-05-movies/static/css/970.74853f30.chunk.css.map",
+    "970.8ce19a5e.chunk.js.map": "/goit-react-hw-05-movies/static/js/970.8ce19a5e.chunk.js.map",
+    "577.25021021.chunk.css.map": "/goit-react-hw-05-movies/static/css/577.25021021.chunk.css.map",
+    "577.114c332f.chunk.js.map": "/goit-react-hw-05-movies/static/js/577.114c332f.chunk.js.map",
+    "894.72be1e92.chunk.css.map": "/goit-react-hw-05-movies/static/css/894.72be1e92.chunk.css.map",
+    "894.eb70f300.chunk.js.map": "/goit-react-hw-05-movies/static/js/894.eb70f300.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc6b8dcd.css",
-    "static/js/main.41454259.js"
+    "static/css/main.64f75226.css",
+    "static/js/main.ce2819bf.js"
   ]
 }
