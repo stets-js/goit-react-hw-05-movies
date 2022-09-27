@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getSearchMovies } from '../../Services/MoviesAPi';
 import {MovieList} from '../../components/MovieList/MovieList'
-import css from '../Movies/Movies.module.css';
+import css from './Movies.module.css';
 
 const Movies = () => {
   const [films, setFilms] = useState([]);
