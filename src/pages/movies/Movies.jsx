@@ -20,7 +20,7 @@ const Movies = () => {
     
     e.preventDefault();
     if (!query) {
-      alert('Enter movie');
+      alert('Please enter movie');
       return;
     }
     setQueryParams({ query })
