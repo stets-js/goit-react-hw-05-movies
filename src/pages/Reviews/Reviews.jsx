@@ -1,4 +1,4 @@
-import { getRewiesMovies } from '../Fetch'
+import { getRewiesMovies } from '../../Services/MoviesAPi'
 import { useEffect, useState, } from 'react'
 import { useParams } from 'react-router-dom'
 import css from '../Reviews/Reviews.module.css'
@@ -6,7 +6,8 @@ import css from '../Reviews/Reviews.module.css'
 export const Reviews = () => {
 
 const { movieId } = useParams();
-const [review, setReview] = useState(null);
+  const [review, setReview] = useState([]);
+  
 
   useEffect(() => {
     getRewiesMovies(movieId).then(data => {
@@ -14,9 +15,11 @@ const [review, setReview] = useState(null);
     });
   }, [movieId]);
 
-    return <>
-      {review ? (
-        <ul className={css.reviewsList}>
+  if (review.length === 0 ) {
+    return <><p className={css.errorReviews}>Sorry, no reviews yet</p></>;
+  }
+
+    return <ul className={css.reviewsList}>
           {review.map(item => {
             return (
               <li key={item.id} className={css.reviewsItem}>
@@ -26,7 +29,5 @@ const [review, setReview] = useState(null);
             );
           })}
         </ul>
-      ) : null}
-    </>
-}
+    }
 export default Reviews

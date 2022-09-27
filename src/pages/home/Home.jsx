@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {getTrending} from '../../components/Fetch';
+import {getTrending} from '../../Services/MoviesAPi';
 import css from './Home.module.css'
 import {MovieList} from '../../components/MovieList/MovieList'
 

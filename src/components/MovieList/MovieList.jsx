@@ -1,5 +1,6 @@
 import css from '../MovieList/MovieList.module.css'
-import {Link,useLocation} from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export const MovieList = ({films}) => {
   const location = useLocation();
@@ -30,4 +31,14 @@ export const MovieList = ({films}) => {
             </li>
           ))}
         </ul>)
+}
+
+MovieList.propTypes = {
+  films: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      release_date: PropTypes.string.isRequired,}
+  )
+  )
 }

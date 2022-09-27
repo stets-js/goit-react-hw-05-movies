@@ -1,7 +1,8 @@
 import { useParams, Outlet, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { getDetailsMovies } from '../Fetch';
+import { getDetailsMovies } from '../../Services/MoviesAPi';
 import css from '../MovieDetail/MovieDetail.module.css'
+import nextId from "react-id-generator";
 
 const MovieDetail = () => {
   const location = useLocation();
@@ -35,14 +36,14 @@ const MovieDetail = () => {
                     alt="error"
         ></img>)}
         <ul className={css.movieInfo}>
-          <h2>{movie.title}</h2>
-          <p>Rating: {movie.vote_average.toFixed(1)}</p>
-          <p>Runtime: {movie.runtime} min</p>
-          <p>Budget: { movie.budget}$</p>
-          <h3>Overview</h3>
-          <p>{movie.overview}</p>
-          <h3>Genres</h3>
-          {movie.genres.map(res => <p>{res.name}</p>)}
+          <h2 key="title">{movie.title}</h2>
+          <p key="rating">Rating: {movie.vote_average.toFixed(1)}</p>
+          <p key="runtime">Runtime: {movie.runtime} min</p>
+          <p key="budget">Budget: { movie.budget}$</p>
+          <h3 key="overviewTitle">Overview</h3>
+          <p key="overview">{movie.overview}</p>
+          <h3 key="genres">Genres</h3>
+          {movie.genres.map(res => <p key={nextId()}>{res.name}</p>)}
         </ul>
       </div>
   
