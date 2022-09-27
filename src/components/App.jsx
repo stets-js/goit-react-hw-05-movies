@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Layout from './Layout/Layout';
 //import Home from '../pages/home/Home'
-import Movies from '../pages/Movies/Movies'
+import Movies from './Movies/Movies'
 //import MovieDetail from '../components/MovieDetail/MovieDetail'
 import Cast from '../pages/Cast/Cast';
 import Reviews from '../pages/Reviews/Reviews';

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getSearchMovies } from '../../Services/MoviesAPi';
-import {MovieList} from '../../components/MovieList/MovieList'
+import {MovieList} from '../MovieList/MovieList'
 import css from './Movies.module.css';
 
 const Movies = () => {
