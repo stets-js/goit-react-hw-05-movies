@@ -16,9 +16,9 @@ export const App = () => {
   return (
     <Layout>
     <Routes>
-      <Route path='/' element={<Suspense fallback={<h2>Loading ...</h2>}><Home /></Suspense>} ></Route>
-        <Route path='/movies' element={<Suspense fallback={<h2>Loading ...</h2>}><Movies /></Suspense>}></Route>
-        <Route path='/movies/:movieId' element={<Suspense fallback={<h2>Loading ...</h2>}><MovieDetail /></Suspense>}>
+      <Route path='/' element={<Suspense fallback={<h2 style={{color: "white",}}>Loading ...</h2>}><Home /></Suspense>} ></Route>
+        <Route path='/movies' element={<Suspense fallback={<h2 style={{color: "white",}}>Loading ...</h2>}><Movies /></Suspense>}></Route>
+        <Route path='/movies/:movieId' element={<Suspense fallback={<h2 style={{color: "white",}}>Loading ...</h2>}><MovieDetail /></Suspense>}>
           <Route path='cast' element={<Cast />}></Route>
           <Route path='reviews' element={<Reviews />}></Route>
         </Route>
